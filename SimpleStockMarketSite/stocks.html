@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Business Casual - Start Bootstrap Theme</title>
+
+    <link href="content/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
+
+    <link href="css/business-casual.min.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <h1 class="site-heading text-center text-white d-none d-lg-block">
+      <span class="site-heading-upper text-primary mb-3">Stock Market</span>
+      <span class="site-heading-lower">The Global Beverage Corporation Exchange</span>
+    </h1>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="#">Start Bootstrap</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item px-lg-4">
+              <a class="nav-link text-uppercase text-expanded" href="index.html">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item px-lg-4">
+              <a class="nav-link text-uppercase text-expanded" href="stocks.html">Stocks</a>
+            </li>
+            <li class="nav-item px-lg-4">
+              <a class="nav-link text-uppercase text-expanded" href="trades.html">Trades</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section class="page-section cta">
+      <div class="container" style="width:40%;margin-left:18%">
+        <label for="stocksList">Select Stock:</label>
+        <select class="form-control" id="stocksList">
+        </select>
+      </div>
+      </br>
+      <div class="container" >
+        <div class="row">
+          <div class="col-xl-9 mx-auto">
+            <div class="cta-inner text-center rounded">
+                <p id="stockTitle"></p>
+                <table class="table" id="stocksTable">
+                   <thead>
+                      <tr>
+                        <th>Type</th>
+                        <th>Last Dividend</th>
+                        <th>Fixed Dividend</th>
+                        <th>Par Value</th>
+                      </tr>
+                   </thead>
+                   <tbody>
+                   </tbody>
+                </table>
+            </div>
+          </div>
+        </div>
+        </br>
+        <div class="container row" style="width:50%;margin-left:12%">
+          <div class="form-group">
+            <label for="price">Price:</label>
+            <input type="text" class="form-control js-mask-price js-price" id="price">
+          </div>
+        </div>
+        <div class="container row" style="width:50%;margin-left:12%">
+          <div class="form-group">
+            <button type="button" class="form-control btn-default" id="btnDividendYield">Calculate Dividend Yield</button>
+            <input type="text" class="form-control js-mask-price" id="dividendYield" readonly>
+          </div>
+          <div class="form-group">
+            <button type="button" class="form-control btn-default" id="btnRatio">Calculate P/E Ratio</button>
+            <input type="text" class="form-control js-mask-price" id="ratio" readonly>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer text-faded text-center py-5">
+      <div class="container">
+        <p class="m-0 small">Copyright &copy; Global Beverage Corporation Exchange 2019</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="content/jquery/jquery.min.js"></script>
+    <script src="content/jquery-inputmask/jquery.inputmask.js"></script>
+    <script src="content/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.js"></script>
+    <script src="content/js/StockMarket.js"></script>
+    <script src="content/js/Stocks.js"></script>
+  </body>
+
+</html>

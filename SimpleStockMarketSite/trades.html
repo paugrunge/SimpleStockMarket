@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Business Casual - Start Bootstrap Theme</title>
+
+    <link href="content/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
+
+    <link href="css/business-casual.min.css" rel="stylesheet">
+
+  </head>
+
+    <body>
+
+        <h1 class="site-heading text-center text-white d-none d-lg-block">
+          <span class="site-heading-upper text-primary mb-3">Stock Market</span>
+          <span class="site-heading-lower">The Global Beverage Corporation Exchange</span>
+        </h1>
+
+    <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="#">Start Bootstrap</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item px-lg-4">
+                            <a class="nav-link text-uppercase text-expanded" href="index.html">Home
+                            <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item px-lg-4">
+                            <a class="nav-link text-uppercase text-expanded" href="stocks.html">Stocks</a>
+                        </li>
+                        <li class="nav-item active px-lg-4">
+                            <a class="nav-link text-uppercase text-expanded" href="Trades.html">Trades</a>
+                        </li>
+                  </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div style="width:70%;margin-left:20%">
+            <div class="page-section cta">
+                <h2 class="text-center text-white">Latest Trade Price Information*</h2>
+                <h5 class="text-center text-white">*Last 5 minutes</h5>
+                <form style="width:50%;margin-left:25%">
+                    <div class="form-group"> <!-- Stock -->
+                        <label for="stocksListCalc" class="control-label">Select Stock</label>
+                        <select class="form-control" id="stocksListCalc">
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <button type="button" class="form-control btn-default" id="btnStockPrice">Calculate Volume Weighted Stock Price</button>
+                        <input type="text" class="form-control js-mask-price" id="stockPrice" readonly>
+                    </div>
+                </form>
+            </div>
+        </div>
+    
+         <div style="width:70%;margin-left:20%">
+            <div class="page-section cta">
+                <h2 class="text-center text-white">Latest Trades*</h2>
+                <h5 class="text-center text-white">*Last 5 minutes</h5>
+                
+                <div class="cta-inner text-center rounded">
+                    <p id="stockTitle">Trades</p>
+                    <table class="table" id="tradesTable">
+                        <thead>
+                            <tr>
+                                <th>Stock Symbol</th>
+                                <th>Indicator</th>
+                                <th>Price</th>
+                                <th>Quantity</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <form style="width:50%;margin-left:25%">
+                    <div class="form-group">
+                        <button type="button" class="form-control btn-default" id="btnGbceShareIndex">Calculate GBCE All Share Index for all Stocks</button>
+                        <input type="text" class="form-control js-mask-price" id="gbceShareIndex" readonly>
+                    </div>
+                </form>   
+               
+            </div>
+        </div>
+
+        <div style="width:70%;margin-left:20%">
+            <div class="page-section cta">
+                <h2 class="text-center text-white">New Trade</h2>
+                <form style="width:50%;margin-left:25%">
+                    <div class="form-group"> <!-- Stock -->
+                        <label for="stocksList" class="control-label">Select Stock</label>
+                        <select class="form-control" id="stocksList">
+                        </select>
+                    </div>
+                    <div class="form-group"> <!-- Indicator -->
+                        <label for="indicator" class="control-label">Select Indicator</label>
+                        <select class="form-control" id="indicator">
+                            <option value="BUY">BUY</option>
+                            <option value="SELL">SELL</option>
+                        </select>
+                    </div>
+                    <div class="form-group"> <!-- Traded Price -->
+                        <label for="tradedPrice" class="control-label">Traded Price</label>
+                        <input type="text" class="form-control js-mask-price js-price" id="tradedPrice" placeholder="">
+                    </div>
+                    <div class="form-group"> <!-- Quantity -->
+                        <label for="quantity" class="control-label">Quantity</label>
+                        <input type="text" class="form-control js-mask-int" id="quantity"  placeholder="">
+                    </div>
+                    <div class="form-group"> <!-- Submit Button -->
+                        <button type="button" class="btn btn-primary" id="btnAddTrade">Add Trade</button>
+                    </div> 
+                </form>
+            </div>
+          </div>
+
+        <footer class="footer text-faded text-center py-5">
+          <div class="container">
+            <p class="m-0 small">Copyright &copy; Global Beverage Corporation Exchange 2019</p>
+        </div>
+        </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="content/jquery/jquery.min.js"></script>
+    <script src="content/jquery-inputmask/jquery.inputmask.js"></script>
+    <script src="content/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.js"></script>
+    <script src="content/js/StockMarket.js"></script>
+    <script src="content/js/Trades.js"></script>
+
+  </body>
+
+</html>
